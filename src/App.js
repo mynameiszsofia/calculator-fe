@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
 
-  const createDigits = () => {
+  const generateDigits = () => {
     const digits = [];
 
     for (let i = 1; i<10; i++) {
@@ -19,20 +19,25 @@ function App() {
         <div className='display'>
           0
         </div>
-        <div className='operators'>
-          <button>+</button>
-          <button>-</button>
-          <button>*</button>
-          <button>/</button>
-
-          <button>DEL</button>
+        <div className='container'>
+          <div className='digits'>
+            {generateDigits()}
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+          </div>
+          <div className='operators'>
+            <button>CLR</button>
+            <button>+</button>
+            <button>-</button>
+            <button>*</button>
+            <button>/</button>
+          </div>
         </div>
-        <div className='digits'>
-          {createDigits()}
-          <button>0</button>
-          <button>.</button>
-          <button>=</button>
-        </div>
+        <div className='memory'>
+            <button>Save</button>
+            <button>Read</button>
+          </div>
       </div>
     </div>
   );
